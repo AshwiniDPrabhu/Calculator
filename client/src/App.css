@@ -1,0 +1,109 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.calculator-grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button{
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
+  border: 1px solid #282c34;
+  background-color: #808080e0;
+  box-shadow: 5px 10px #d3d3d3a1;
+}
+
+.calculator-grid > button:hover{
+  background-color: light#808080e0;
+}
+
+.calculator-display{
+  grid-column: 1 / -1;
+  background-color:#282c34;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  box-shadow: 5px 10px #d3d3d3a1;
+}
+
+.calculator-output {
+  font-size: 1.5em;
+}
+
+.calculator-error {
+  color: #ffb1b1;
+}
+
+input[type="text"] {
+  color: white;
+  background-color: #282c34;
+  border: solid #282c34 2px;
+  width: 100%
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  justify-content: center;
+}
+
+.right {
+  right: 0;
+  background-color:#282c34;
+}
+
+.calculation-messages-header {
+  color: white;
+  text-align: center;
+}
+
+.calculation-messages-date {
+  font-size: 0.75em;
+  margin: 1em;
+}
+
+#message-container {
+  margin: 20px;
+}
+
+#message-container div {
+  background-color: #CCC;
+  font-size: larger;
+  padding: 5px;
+}
+
+#message-container div:nth-child(2n) {
+  background-color: #FFF;
+}
